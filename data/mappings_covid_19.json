@@ -1,0 +1,150 @@
+{
+    "dynamic": "strict",
+    "properties": {
+        "location" : {
+            "type" : "geo_point"
+        },
+        "Gender" : {
+            "type" : "keyword",
+            "store": true
+        },
+        "Hospital_Pref" : {
+            "type" : "keyword"
+        },
+        "PCR検査実施人数": {
+            "type" : "integer"
+        },
+        "PCR検査前日比": {
+            "type" : "integer"
+        },
+        "Release" : {
+            "type" : "keyword"
+        },
+        "Residential_Pref" : {
+            "type" : "keyword"
+        },
+        "X" : {
+            "type" : "float"
+        },
+        "Y" : {
+            "type" : "float"
+        },                
+        "キー" : {
+            "type" : "keyword"
+        },
+        "ステータス" : {
+            "type" : "keyword"
+        },
+        "ソース" : {
+            "type" : "keyword",
+            "index" : false,
+            "store" : true
+        },
+        "ソース2" : {
+            "type" : "keyword",
+            "index" : false,
+            "store" : true
+        },
+        "ソース3" : {
+            "type" : "keyword",
+            "index" : false,
+            "store" : true
+        },
+        "チャーター便" : {
+            "type" : "keyword"
+        },
+        "確定日" : {
+            "type" : "date"
+        },
+        "確定日YYYYMMDD" : {
+            "type" : "date",
+            "format" : "yyyy-MM-dd HH:mm:ss",
+            "store" : true
+        },
+        "居住管内" : {
+            "type" : "keyword"
+        },
+        "居住市区町村" : {
+            "type" : "keyword"
+        },
+        "居住都道府県" : {
+            "type" : "keyword"
+        },
+        "居住都道府県コード" : {
+            "type" : "integer"
+        },
+        "勤務先_正誤確認用" : {
+            "type" : "keyword"
+        },
+        "厚労省NO" : {
+            "type" : "integer"
+        },
+        "更新日時" : {
+            "type" : "date",
+            "store" : false
+        },
+        "国内" : {
+            "type" : "keyword"
+        },
+        "死者合計" : {
+            "type" : "integer"
+        },
+        "受診都道府県" : {
+            "type" : "keyword"
+        },
+        "受診都道府県コード" : {
+            "type" : "integer"
+        },
+        "職業_正誤確認用" : {
+            "type" : "keyword"
+        },
+        "人数" : {
+            "type" : "integer"
+        },
+        "性別" : {
+            "type" : "keyword"
+        },
+        "前日比" : {
+            "type" : "integer"
+        },
+        "退院数" : {
+            "type" : "integer"
+        },
+        "退院数累計" : {
+            "type" : "integer"
+        },
+        "通し" : {
+            "type" : "integer"
+        },
+        "都道府県内症例番号" : {
+            "type" : "integer"
+        },
+        "年代" : {
+            "type" : "integer"
+        },
+        "発症数" : {
+            "type" : "integer"
+        },        
+        "発症日" : {
+            "type" : "date",
+            "format" : "yyyy-MM-dd HH:mm:ss",
+            "index" : true,
+            "store" : true
+        },
+        "発表" : {
+            "type" : "keyword"
+        },
+        "備考" : {
+            "type" : "keyword"
+        },
+        "無症状病原体保有者" : {
+            "type" : "keyword"
+        },
+        "累計" : {
+            "type" : "integer"
+        },
+        "ObjectId" : {
+            "type" : "integer"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kibana
+  labels:
+    app: kibana
+spec:
+  selector:    
+    matchLabels:      
+      app: kibana
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kibana
+    spec:
+      containers:
+      - name: kibana
+        image: docker.elastic.co/kibana/kibana:7.4.0
+        env:
+        - name: ELASTICSEARCH_HOSTS
+          value: "http://192.168.64.3:31978"
+        - name: xpack.graph.enabled
+          value: "false"
+        - name: xpack.security.enabled
+          value: "false"
+        - name: xpack.ml.enabled
+          value: "false"    
+        resources:
+          limits:
+            cpu: 1000m
+          requests:
+            cpu: 100m
+        ports:
+        - containerPort: 5601
+          name: http
+        readinessProbe:
+          httpGet:
+            path: /api/status
+            port: http
+          initialDelaySeconds: 20
+          timeoutSeconds: 5
